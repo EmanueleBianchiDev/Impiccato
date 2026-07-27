@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  background: #1a1a1a;
+  background-image: 
+    radial-gradient(circle at 25% 25%, #333 2%, transparent 2%),
+    radial-gradient(circle at 75% 75%, #333 2%, transparent 2%);
+  border: 8px solid #8B4513;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 700px;
+  box-shadow: 
+    0 0 50px rgba(0,0,0,0.8),
+    inset 0 0 50px rgba(0,0,0,0.3);
+}
+
+/* Titolo gesso */
+h1 {
+  color: #f4e4bc;
+  font-size: 3em;
+  text-shadow: 
+    2px 2px 0 #8B4513,
+    4px 4px 0 #A0522D;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+}
+
+/* Selezione modalità */
+.mode-selection {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.mode-btn {
+  background: linear-gradient(145deg, #8B4513, #A0522D);
+  color: #f4e4bc;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 15px;
+  cursor: pointer;
+  text-shadow: 1px 1px 0 #654321;
+  box-shadow: 
+    0 4px 8px rgba(0,0,0,0.3),
+    inset 0 2px 4px rgba(255,255,255,0.2);
+  transition: all 0.3s;
+}
+
+.mode-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+.mode-btn.active {
+  background: linear-gradient(145deg, #D2691E, #CD853F);
+  box-shadow: 0 0 20px rgba(210,105,30,0.5);
+}
+
+/* Input giocatore 2 */
+.input-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#custom-word {
+  background: #2c2c2c;
+  color: #f4e4bc;
+  border: 3px solid #8B4513;
+  padding: 15px;
+  font-size: 1.2em;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  font-family: inherit;
+  text-shadow: none;
+}
+
+#custom-word::placeholder {
+  color: #888;
+}
+
+/* Teschi */
+#hangman-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.hangman {
+  font-size: 3.5em;
+  margin: 0 8px;
+  display: none;
+  filter: drop-shadow(3px 3px 0 #654321);
+}
+
+/* Parola */
+.word-container {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #f4e4bc;
+  text-shadow: 
+    3px 3px 0 #8B4513,
+    6px 6px 0 #A0522D;
+  letter-spacing: 15px;
+  margin-bottom: 20px;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Lettere usate */
+#guessed-letters {
+  color: #f4e4bc;
+  font-size: 1.3em;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 0 #654321;
+}
+
+/* Tastiera */
+#alphabet-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.alphabet-row {
+  display: flex;
+  gap: 8px;
+}
+
+.alphabet-letter {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(145deg, #8B4513, #A0522D);
+  color: #f4e4bc;
+  border: 3px solid #D2691E;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4em;
+  font-weight: bold;
+  cursor: pointer;
+  text-shadow: 1px 1px 0 #654321;
+  box-shadow: 
+    0 4px 8px rgba(0,0,0,0.4),
+    inset 0 2px 4px rgba(255,255,255,0.1);
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.alphabet-letter:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 6px 12px rgba(0,0,0,0.5),
+    inset 0 2px 4px rgba(255,255,255,0.2);
+}
+
+.alphabet-letter:active {
+  transform: translateY(0);
+}
+
+/* Pulsanti */
+button {
+  background: linear-gradient(145deg, #D2691E, #CD853F);
+  color: #f4e4bc;
+  border: 3px solid #8B4513;
+  padding: 15px 40px;
+  font-size: 1.3em;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: inherit;
+  text-shadow: 2px 2px 0 #654321;
+  box-shadow: 
+    0 6px 12px rgba(0,0,0,0.4),
+    inset 0 2px 4px rgba(255,255,255,0.2);
+  transition: all 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  .alphabet-letter {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2em;
+  }
+}

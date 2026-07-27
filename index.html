@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impiccato - Lavagna</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Titolo -->
+    <h1>🪦 IMPICCATO 🪦</h1>
+
+    <!-- Selezione modalità -->
+    <div id="mode-selection" class="mode-selection">
+      <button id="mode1-btn" class="mode-btn active">1 Giocatore</button>
+      <button id="mode2-btn" class="mode-btn">2 Giocatori</button>
+    </div>
+
+    <!-- Input per 2 giocatori -->
+    <div id="player2-input" class="input-section" style="display: none;">
+      <input type="text" id="custom-word" placeholder="Inserisci la parola (no accenti/apostrofi)">
+      <button id="start-game-btn">Inizia Gioco</button>
+    </div>
+
+    <!-- Gioco -->
+    <div id="game-container" style="display: none;">
+      <!-- Teschi -->
+      <div id="hangman-container">
+        <div id="hangman-1" class="hangman">💀</div>
+        <div id="hangman-2" class="hangman">💀</div>
+        <div id="hangman-3" class="hangman">💀</div>
+        <div id="hangman-4" class="hangman">💀</div>
+        <div id="hangman-5" class="hangman">💀</div>
+        <div id="hangman-6" class="hangman">💀</div>
+      </div>
+
+      <!-- Parola -->
+      <div id="word-container" class="word-container"></div>
+
+      <!-- Lettere usate -->
+      <div id="guessed-letters">Lettere usate: </div>
+
+      <!-- Tastiera -->
+      <div id="alphabet-container"></div>
+
+      <!-- Pulsante restart -->
+      <button id="reset-button">Gioca di nuovo</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
